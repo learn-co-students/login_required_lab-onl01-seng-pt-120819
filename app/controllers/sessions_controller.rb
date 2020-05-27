@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
 
     def new
+        #byebug
         session[:name] = params[:name]
     end
 
@@ -14,7 +15,7 @@ class SessionsController < ApplicationController
     end
     
     def create
-        
+       
         session[:name] = params[:name]
        
         if session[:name] == nil || session[:name] == ""

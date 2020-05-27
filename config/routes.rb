@@ -6,7 +6,7 @@ Rails.application.routes.draw do
    get '/secret' => 'secrets#show'
   resources :sessions, except: [:new, :create, :destroy]
   get '/show' => 'sessions#show'
-  get '/login' => 'sessions#new'
+  get '/login' => 'sessions#new', as: :new_sessions
   post '/login' => 'sessions#create'
   post '/logout' => 'sessions#destroy'
 end
