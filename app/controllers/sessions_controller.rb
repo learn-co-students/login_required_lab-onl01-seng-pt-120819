@@ -11,7 +11,8 @@ def index
 end
 
 def create 
-    if current_user && !params[:name].empty?
+    if params[:name] && !params[:name].empty?
+        session[:name] = params[:name]
         redirect_to '/'
     else
         redirect_to '/login'
