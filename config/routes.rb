@@ -7,4 +7,6 @@ post "/login", to: "sessions#create"
 post "/logout", to: "sessions#destroy"
 
 get "/secret", to: "secrets#show"
+
+root 'application#hello'
 end
